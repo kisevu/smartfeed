@@ -50,7 +50,7 @@ public class UpdateServlet extends HttpServlet {
                 if (rowsUpdated > 0) {
                     // Update successful, redirect or show success message
                     request.setAttribute("message", "Profile updated successfully!");
-                    request.getRequestDispatcher("home.jsp").forward(request, response);
+                    request.getRequestDispatcher("footer.jsp").forward(request, response);
                 } else {
                     // No rows updated (shouldn't happen), show an error message
                     request.setAttribute("message", "Error updating profile.");

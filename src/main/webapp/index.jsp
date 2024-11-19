@@ -108,7 +108,7 @@
             align-items: center;
             text-align: center;
         }
-             /* indicates all  the buttons to include the properties*/
+        /* indicates all  the buttons to include the properties*/
         /* Base button style */
         .btn-custom {
             border: none;
@@ -209,7 +209,7 @@
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-            <a class="nav-item" href="logout.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <a class="nav-item" href="login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </div>
 </div>
@@ -437,17 +437,13 @@
             </div>
         </div>
 
-        <!-- Repeat the same structure for other cards, changing only data-card-id attribute -->
-
-
-
-
-
+        <!-- Footer has been imported over here -->
+        <%@include file="WEB-INF/jspf/footer.jsp"%>
 
     </div>
 </div>
 
-                                <!-- Toggle behavior for the comments button -->
+<!-- Toggle behavior for the comments button -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -457,7 +453,7 @@
 <script>
     // Function to handle the comment toggle (show/hide the comment section)
     function toggleCommentSection(cardId) {
-        var card = document.querySelector(`[data-card-id="${cardId}"]`);
+        var card = document.querySelector([data-card-id="${cardId}"]);
         var commentSection = card.querySelector('.comment-section');
         var commentBtn = card.querySelector('.comment-btn');
 
@@ -505,8 +501,6 @@
         });
     });
 </script>
-
-
 
 </body>
 
