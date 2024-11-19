@@ -180,6 +180,10 @@
             border-top: none;
         }
 
+        .card {
+            /*margin: .5rem;*/
+        }
+
 
     </style>
 </head>
