@@ -112,7 +112,7 @@
         /* Base button style */
         .btn-custom {
             border: none;
-            color: white; /* Ensure text is visible on dark buttons */
+            color: black; /* Ensure text is visible on dark buttons */
         }
 
         /* Like Button */
@@ -185,6 +185,43 @@
         }
 
 
+        /* mini navbar inside the custom jumbotron */
+
+        .jumbotron-custom {
+            background-color: #007bff;
+            color: black;
+            height: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .custom-navbar {
+            position: absolute;
+            bottom: 10px; /* Adjust this to position navbar within the jumbotron */
+            width: 100%; /* Make sure the navbar spans the full width */
+        }
+
+        .navbar-nav .nav-item {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color:black;
+        }
+
+
+
     </style>
 </head>
 
@@ -193,10 +230,11 @@
     <div class="container-fluid">
         <h2 class="text-center text-white">Dashboard</h2>
         <div class="nav flex-column">
-            <a class="nav-item active" href="/"><i class="bi bi-house-door"></i> Dashboard</a>
+            <a class="nav-item active" href="index.jsp"><i class="bi bi-house-door"></i> Dashboard</a>
 
             <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
             <div class="collapse" id="categoryDropdown">
+                <a class="nav-item" href="category.jsp"><i class="bi bi-person"></i>Add Category</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Technology"><i class="bi bi-tag"></i> Technology</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Sports"><i class="bi bi-tag"></i> Sports</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Family"><i class="bi bi-tag"></i> Family</a>
@@ -209,7 +247,8 @@
             </div>
             <a class="nav-item" href="profile.jsp"><i class="bi bi-person"></i> Profile</a>
 
-            <a class="nav-item" href="settings.jsp"><i class="bi bi-gear"></i> Settings</a>
+            <a class="nav-item" href="settings"><i class="bi bi-gear"></i> Settings</a>
+            <a class="nav-item" href="groups.jsp"><i class="bi bi-gear"></i> Groups</a>
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
@@ -221,6 +260,42 @@
 
 <!-- Main Content Section -->
 <div class="container mt-5">
+    <div class="jumbotron-custom">
+        <div class="row">
+            <h2>Everything to do with a post</h2>
+        </div>
+
+        <!-- Navbar inside jumbotron-custom -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.jsp">SmartFeed</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/posts/create-post.jsp">Upload a Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
     <h2 class="text-center mb-7 mt-7">Smart Feed Automation and Personalization</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <!-- Card 1 -->

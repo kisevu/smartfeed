@@ -62,7 +62,7 @@ public class RegisterServlet extends HttpServlet {
             if (rowsAffected > 0) {
                 printWriter.println("Registration was successful.");
                 request.setAttribute("status","success");
-                response.sendRedirect("home");
+                response.sendRedirect("login");
 
             } else {
                 printWriter.println("Registration failed.");

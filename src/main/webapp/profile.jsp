@@ -12,13 +12,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             display: flex;
             min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-image: url('<%= request.getContextPath() %>/images/login.jpg');
         }
 
         .sidebar {
@@ -104,10 +108,11 @@
     <div class="container-fluid">
         <h2 class="text-center text-white">Dashboard</h2>
         <div class="nav flex-column">
-            <a class="nav-item" href="/"><i class="bi bi-house-door"></i> Dashboard</a>
+            <a class="nav-item active" href="/"><i class="bi bi-house-door"></i> Dashboard</a>
 
             <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
             <div class="collapse" id="categoryDropdown">
+                <a class="nav-item" href="category.jsp"><i class="bi bi-person"></i>Add Category</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Technology"><i class="bi bi-tag"></i> Technology</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Sports"><i class="bi bi-tag"></i> Sports</a>
                 <a class="nav-item ms-3" href="category.jsp?category=Family"><i class="bi bi-tag"></i> Family</a>
@@ -118,9 +123,10 @@
                     <a class="nav-item ms-3" href="category.jsp?filter=work"><i class="bi bi-briefcase"></i> Filter by Work</a>
                 </div>
             </div>
-            <a class="nav-item active" href="profile.jsp"><i class="bi bi-person"></i> Profile</a>
+            <a class="nav-item" href="profile.jsp"><i class="bi bi-person"></i> Profile</a>
 
-            <a class="nav-item" href="settings.jsp"><i class="bi bi-gear"></i> Settings</a>
+            <a class="nav-item" href="settings"><i class="bi bi-gear"></i> Settings</a>
+            <a class="nav-item" href="groups.jsp"><i class="bi bi-gear"></i> Groups</a>
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
@@ -157,11 +163,10 @@
     <div class="row mt-4">
         <div class="col-md-8">
 <%--            <h2>${user.firstName} ${user.lastName}</h2>--%>
-            <h2> Angeline Rose </h2>
+            <h2><strong>Names:</strong>Angeline Rose </h2>
             <p><strong>Email:</strong> angelinehr@edu.care</p>
-            <p><strong>Bio:</strong></p>
-            <p>
-               I love pets and nature.
+            <p><strong>Bio:</strong>
+                I love pets and nature.
                 Feels awesome to be the change I want when it comes to matters, environment.
             </p>
         </div>
@@ -176,8 +181,8 @@
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <div class="form-group mb-3">
-                                    <label for="first_name" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                                    <label for="first_name" class="form-label">Group Name</label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required/>
                                     <div class="invalid-feedback">
                                         Please enter your first name.
                                     </div>
@@ -185,7 +190,7 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-group mb-3">
-                                    <label for="last_name" class="form-label">Last Name</label>
+                                    <label for="last_name" class="form-label"> Name</label>
                                     <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required>
                                     <div class="invalid-feedback">
                                         Please enter your last name.
@@ -272,7 +277,7 @@
 
     </div>
 
-
+</div>
     <script>
         // Function to handle the file input and drag-and-drop functionality
         function handleFileUpload(dropAreaId, inputId) {
