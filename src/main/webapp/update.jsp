@@ -115,15 +115,15 @@
       <div class="position-relative">
 
         <h3 class="text-center mb-7 mt-7">Update Account</h3>
-        <form action="update" method="post"  novalidate>
+        <form action="upload" method="post"  novalidate enctype="multipart/form-data">
           <div class="form-group mb-3">
-            <label for="profilePic" class="form-label">upload profile</label>
-            <input type="file" class="form-control" id="profilePic" name="profilePic"  required>
+            <label for="profilePic" class="form-label">Upload profile Picture</label>
+            <input type="file" class="form-control" id="profilePic" name="profilePic"  required/>
           </div>
 
           <div class="form-group mb-3">
-            <label for="coverPic" class="form-label">upload profile</label>
-            <input type="file" class="form-control" id="coverPic" name="coverPic"  required>
+            <label for="coverPic" class="form-label">Upload Cover Picture</label>
+            <input type="file" class="form-control" id="coverPic" name="coverPic"  required/>
           </div>
 
           <div class="mb-3 text-center">
