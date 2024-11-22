@@ -110,7 +110,7 @@
 
       <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-      <a class="nav-item" href="login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      <a class="nav-item" href="/"><i class="bi bi-box-arrow-right"></i> Logout</a>
     </div>
   </div>
 </div>
@@ -119,7 +119,7 @@
   <h2 class="text-center mb-7 mt-7">Welcomed to the Settings Page</h2>
   <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <form action="SettingsServlet" method="POST">
+    <form action="#" method="POST">
       <!-- Display current settings from request attributes -->
       <div class="mb-3">
         <label for="first_name" class="form-label">First Name </label>

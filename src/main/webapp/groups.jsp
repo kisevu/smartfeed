@@ -108,13 +108,13 @@
             <a class="nav-item" href="settings"><i class="bi bi-gear"></i> Settings</a>
             <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#groupDropdown" aria-expanded="false" aria-controls="groupDropdown"><i class="bi bi-gear"></i> Groups</a>
             <div class="collapse" id="groupDropdown">
-                <a class="nav-item" href="/groups/create-group.jsp"><i class="bi bi-person"></i>Create Group</a>
-                <a class="nav-item" href="/groups/add-to-group.jsp"><i class="bi bi-person"></i>Add to Group</a>
+                <a class="nav-item" href="groups/create-group.jsp"><i class="bi bi-person"></i>Create Group</a>
+                <a class="nav-item" href="groups/add-to-group.jsp"><i class="bi bi-person"></i>Add to Group</a>
             </div>
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-            <a class="nav-item" href="login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <a class="nav-item" href="/"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </div>
 </div>

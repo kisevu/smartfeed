@@ -6,20 +6,29 @@ package com.smartfeed.kevin.db;
 *
 */
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.sql.*;
 
 public class DBConnection {
 
-    public static Connection connection = null;
+    private static final String url="jdbc:mysql://localhost:3306/smartfeed";
+    private static final String USER="root";
+    private static final String PWD="rootUser@123";
 
 
-    public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        if (connection == null) {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/smartfeed";
-            connection = DriverManager.getConnection(url, "root", "rootUser@123");
-        }
-        return connection;
+    public static Connection getConnection() throws SQLException {
+       try{
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           return DriverManager.getConnection(url,USER,PWD);
+       }catch (ClassNotFoundException ex){
+           throw new SQLException("JDBC Driver not found.");
+       }
+    }
+
+    public static String hashPassword(String password){
+        String salt = BCrypt.gensalt(12);
+        return BCrypt.hashpw(password,salt);
     }
 
 }

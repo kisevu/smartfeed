@@ -71,7 +71,7 @@ public class UploadServlet extends HttpServlet {
                     // Send a success message
                     response.getWriter().println("Upload has been done successfully!");
                     response.getWriter().println("File path: " + filePath);
-//                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("index.jsp");
                 }
             }
         } catch (Exception ex) {

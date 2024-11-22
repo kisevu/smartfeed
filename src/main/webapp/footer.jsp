@@ -84,10 +84,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.jsp">Notifications</a>
+          <a class="nav-link" href="#">Notifications</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.jsp">Logout</a>
+          <a class="nav-link" href="/">Logout</a>
         </li>
       </ul>
     </div>
@@ -144,7 +144,7 @@
           <p class="card-text">Stay connected with your friends and family by following their feeds and updates.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="login.jsp" class="btn btn-custom">Login</a>
+          <a href="/" class="btn btn-custom">Login</a>
         </div>
       </div>
     </div>
@@ -158,7 +158,7 @@
           <p class="card-text">If you're a content creator, this is the place to showcase your talents and engage with fans.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="create-content.jsp" class="btn btn-custom">Start Creating</a>
+          <a href="#" class="btn btn-custom">Start Creating</a>
         </div>
       </div>
     </div>

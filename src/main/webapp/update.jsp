@@ -84,7 +84,7 @@
   <div class="container-fluid">
     <h2 class="text-center text-white">Dashboard</h2>
     <div class="nav flex-column">
-      <a class="nav-item" href="/"><i class="bi bi-house-door"></i> Dashboard</a>
+      <a class="nav-item" href="dashboard.jsp"><i class="bi bi-house-door"></i> Dashboard</a>
 
       <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
       <div class="collapse" id="categoryDropdown">
@@ -104,7 +104,7 @@
 
       <a class="nav-item active" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-      <a class="nav-item" href="login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      <a class="nav-item" href="/"><i class="bi bi-box-arrow-right"></i> Logout</a>
     </div>
   </div>
 </div>

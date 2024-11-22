@@ -82,7 +82,7 @@
             <li><a class="dropdown-item" href="category.jsp?category=Family">Family</a></li>
             <li><a class="dropdown-item" href="category.jsp?category=Work">Work</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="allCategories.jsp">All Categories</a></li>
+            <li><a class="dropdown-item" href="#">All Categories</a></li>
           </ul>
         </li>
         <li class="nav-item">

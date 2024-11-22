@@ -108,7 +108,7 @@
     <div class="container-fluid">
         <h2 class="text-center text-white">Dashboard</h2>
         <div class="nav flex-column">
-            <a class="nav-item active" href="/"><i class="bi bi-house-door"></i> Dashboard</a>
+            <a class="nav-item active" href="dashboard.jsp"><i class="bi bi-house-door"></i> Dashboard</a>
 
             <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
             <div class="collapse" id="categoryDropdown">
@@ -130,7 +130,7 @@
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-            <a class="nav-item" href="login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <a class="nav-item" href="/"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </div>
 </div>
@@ -177,11 +177,11 @@
                     Update Profile
                 </div>
                 <div class="card-body" style="margin-bottom:-1rem">
-                    <form action="update.jsp">
+                    <form action="update">
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <div class="form-group mb-3">
-                                    <label for="first_name" class="form-label">Group Name</label>
+                                    <label for="first_name" class="form-label">First Name</label>
                                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required/>
                                     <div class="invalid-feedback">
                                         Please enter your first name.
@@ -190,8 +190,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-group mb-3">
-                                    <label for="last_name" class="form-label"> Name</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required>
+                                    <label for="last_name" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required/>
                                     <div class="invalid-feedback">
                                         Please enter your last name.
                                     </div>
@@ -201,7 +201,7 @@
                             <li class="list-group-item">
                                 <div class="form-group mb-3">
                                     <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required/>
                                     <div class="invalid-feedback">
                                         Please enter a valid email address.
                                     </div>
@@ -246,12 +246,14 @@
                 <h5>Cover Photo</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form action="upload.jsp">
-                            <div id="coverPhotoDropArea" class="upload-area">
-                                <p>Drag & Drop your Cover Photo here or click to select</p>
-                                <input type="file" id="coverPhotoInput" class="d-none" accept="image/*">
+                        <form action="upload" method="post" novalidate enctype="multipart/form-data">
+                            <div class="form-group mb-3">
+                                <label for="profilePic" class="form-label">Upload profile Picture</label>
+                                <input type="file" class="form-control" id="profilePic" name="profilePic"  required/>
                             </div>
-                            <button type="submit" class="btn btn=danger">upload</button>
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn btn-primary">upload</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -261,12 +263,14 @@
                 <h5>Profile Picture</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form action="upload.jsp">
-                            <div id="profilePicDropArea" class="upload-area">
-                                <p>Drag & Drop your Profile Picture here or click to select</p>
-                                <input type="file" id="profilePicInput" class="d-none" accept="image/*">
+                        <form action="upload" method="post" enctype="multipart/form-data">
+                            <div class="form-group mb-3">
+                                <label for="coverPic" class="form-label">Upload Cover Picture</label>
+                                <input type="file" class="form-control" id="coverPic" name="coverPic"  required/>
                             </div>
-                            <button type="submit" class="btn btn=danger">upload</button>
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn btn-primary">upload</button>
+                            </div>
                         </form>
                     </div>
                 </div>
