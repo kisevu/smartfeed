@@ -193,7 +193,6 @@
 </style>
 <body>
 
-
 <div class="sidebar">
     <div class="container-fluid">
         <h2 class="text-center text-white">Dashboard</h2>
@@ -220,7 +219,7 @@
 
             <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-            <a class="nav-item" href="/"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <a class="nav-item" href="logout.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </div>
 </div>

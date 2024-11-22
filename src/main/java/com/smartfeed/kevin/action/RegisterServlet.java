@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
                 int rowsAffected = stmt.executeUpdate();
                 if (rowsAffected > 0) {
                     //redirect to login page after successful registration
-                    res.sendRedirect("login.jsp");
+                    res.sendRedirect("/secure/index.jsp");
                 } else {
                     res.sendRedirect("register.jsp?error=1");
                 }

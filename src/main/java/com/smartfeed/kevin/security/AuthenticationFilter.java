@@ -23,7 +23,7 @@ public class AuthenticationFilter implements Filter {
         String path = httpRequest.getRequestURI();
 
         // Allow login and registration pages to be accessed without being logged in
-        if (path.endsWith("login.jsp") || path.endsWith("register.jsp") || path.endsWith("login") || path.endsWith("register")) {
+        if (path.endsWith("index.jsp") || path.endsWith("register.jsp") || path.endsWith("login") || path.endsWith("register")) {
             chain.doFilter(request, response);
             return;
         }
@@ -32,7 +32,7 @@ public class AuthenticationFilter implements Filter {
 
         // If no session or account_id is not found, redirect to login page
         if (session == null || session.getAttribute("account_id") == null) {
-            ((HttpServletResponse) response).sendRedirect("login.jsp"); //redirect to login if not authenticated
+            ((HttpServletResponse) response).sendRedirect("../index.jsp"); //redirect to login if not authenticated
         } else {
             chain.doFilter(request, response); // User is authenticated, continue with the request
         }

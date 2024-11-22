@@ -230,29 +230,29 @@
   <div class="container-fluid">
     <h2 class="text-center text-white">Dashboard</h2>
     <div class="nav flex-column">
-      <a class="nav-item active" href="index.jsp"><i class="bi bi-house-door"></i> Dashboard</a>
+      <a class="nav-item active" href="dashboard.jsp"><i class="bi bi-house-door"></i> Dashboard</a>
 
       <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
       <div class="collapse" id="categoryDropdown">
         <a class="nav-item" href="../../create-group"><i class="bi bi-person"></i>Add Category</a>
-        <a class="nav-item ms-3" href="../category.jsp?category=Technology"><i class="bi bi-tag"></i> Technology</a>
-        <a class="nav-item ms-3" href="../category.jsp?category=Sports"><i class="bi bi-tag"></i> Sports</a>
-        <a class="nav-item ms-3" href="../category.jsp?category=Family"><i class="bi bi-tag"></i> Family</a>
-        <a class="nav-item ms-3" href="../category.jsp?category=Work"><i class="bi bi-tag"></i> Work</a>
+        <a class="nav-item ms-3" href="category.jsp?category=Technology"><i class="bi bi-tag"></i> Technology</a>
+        <a class="nav-item ms-3" href="category.jsp?category=Sports"><i class="bi bi-tag"></i> Sports</a>
+        <a class="nav-item ms-3" href="category.jsp?category=Family"><i class="bi bi-tag"></i> Family</a>
+        <a class="nav-item ms-3" href="category.jsp?category=Work"><i class="bi bi-tag"></i> Work</a>
         <div class="ms-4 mt-2">
-          <a class="nav-item ms-3" href="../category.jsp?filter=family"><i class="bi bi-person"></i> Filter by Family</a>
-          <a class="nav-item ms-3" href="../category.jsp?filter=friends"><i class="bi bi-person-check"></i> Filter by Friends</a>
-          <a class="nav-item ms-3" href="../category.jsp?filter=work"><i class="bi bi-briefcase"></i> Filter by Work</a>
+          <a class="nav-item ms-3" href="category.jsp?filter=family"><i class="bi bi-person"></i> Filter by Family</a>
+          <a class="nav-item ms-3" href="category.jsp?filter=friends"><i class="bi bi-person-check"></i> Filter by Friends</a>
+          <a class="nav-item ms-3" href="category.jsp?filter=work"><i class="bi bi-briefcase"></i> Filter by Work</a>
         </div>
       </div>
-      <a class="nav-item" href="../profile.jsp"><i class="bi bi-person"></i> Profile</a>
+      <a class="nav-item" href="profile.jsp"><i class="bi bi-person"></i> Profile</a>
 
       <a class="nav-item" href="settings"><i class="bi bi-gear"></i> Settings</a>
-      <a class="nav-item" href="../groups.jsp"><i class="bi bi-gear"></i> Groups</a>
+      <a class="nav-item" href="groups.jsp"><i class="bi bi-gear"></i> Groups</a>
 
-      <a class="nav-item" href="../update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
+      <a class="nav-item" href="update.jsp"><i class="bi bi-pencil-square"></i> Update</a>
 
-      <a class="nav-item" href="../login.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      <a class="nav-item" href="logout.jsp"><i class="bi bi-box-arrow-right"></i> Logout</a>
     </div>
   </div>
 </div>
@@ -268,14 +268,14 @@
     <!-- Navbar inside jumbotron-custom -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../">SmartFeed</a>
+        <a class="navbar-brand" href="dashboard.jsp">SmartFeed</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/posts/create-post.jsp">Upload a Post</a>
+              <a class="nav-link active" aria-current="page" href="../secure/posts/create-post.jsp">Upload a Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Search</a>
@@ -517,8 +517,6 @@
     </div>
 
     <!-- Footer has been imported over here -->
-    <%@include file="../WEB-INF/jspf/footer.jsp"%>
-
   </div>
 </div>
 

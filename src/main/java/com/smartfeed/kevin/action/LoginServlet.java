@@ -49,16 +49,16 @@ public class LoginServlet extends HttpServlet {
                             session.setAttribute("email",email);
                             response.sendRedirect("/secure/dashboard.jsp"); // redirect to secure page
                         }else{
-                            response.sendRedirect("login.jsp?error=1");
+                            response.sendRedirect("/errors/errors.jsp");
                         }
                     }else{
-                        response.sendRedirect("login.jsp?error=2");
+                        response.sendRedirect("/errors/errors.jsp");
                     }
                 }
             }
         }catch (SQLException ex){
             System.out.println("An error occurred: "+ex.getMessage());
-            response.sendRedirect("login.jsp?error=3");
+            response.sendRedirect("index.jsp?error=3");
         }
 
     }

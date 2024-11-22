@@ -90,7 +90,7 @@
   <div class="container-fluid">
     <h2 class="text-center text-white">Dashboard</h2>
     <div class="nav flex-column">
-      <a class="nav-item active" href="../"><i class="bi bi-house-door"></i> Dashboard</a>
+      <a class="nav-item active" href="../.."><i class="bi bi-house-door"></i> Dashboard</a>
 
       <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
       <div class="collapse" id="categoryDropdown">

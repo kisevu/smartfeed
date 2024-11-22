@@ -47,16 +47,16 @@ public class LogoutServlet extends HttpServlet {
                             session.setAttribute("email",email);
                             res.sendRedirect("index.jsp"); //redirect to secure page
                         }else{
-                            res.sendRedirect("login.jsp?error=1");
+                            res.sendRedirect("/errors/errors.jsp");
                         }
                     }else{
-                        res.sendRedirect("login.jsp?error=2"); //user cannot be found
+                        res.sendRedirect("/errors/errors.jsp"); //user cannot be found
                     }
                 }
             }
         }catch (SQLException ex){
             System.out.println("An error occurred: "+ex.getMessage());
-            res.sendRedirect("login.jsp?error=3");
+            res.sendRedirect("/errors/errors.jsp");
         }
     }
 
