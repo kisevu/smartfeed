@@ -115,7 +115,7 @@
       <div class="position-relative">
 
         <h3 class="text-center mb-7 mt-7">Update Account</h3>
-        <form action="upload" method="post"  novalidate enctype="multipart/form-data">
+        <form action="upload" method="post"  novalidate  enctype="multipart/form-data">
           <div class="form-group mb-3">
             <label for="profilePic" class="form-label">Upload profile Picture</label>
             <input type="file" class="form-control" id="profilePic" name="profilePic"  required/>

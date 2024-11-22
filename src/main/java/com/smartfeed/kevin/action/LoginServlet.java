@@ -47,6 +47,7 @@ public class LoginServlet extends HttpServlet {
                             HttpSession session = request.getSession();
                             session.setAttribute("account_id",rs.getInt("account_id"));
                             session.setAttribute("email",email);
+
                             response.sendRedirect("/secure/dashboard.jsp"); // redirect to secure page
                         }else{
                             response.sendRedirect("/errors/errors.jsp");

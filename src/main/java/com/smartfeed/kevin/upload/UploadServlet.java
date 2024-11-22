@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/upload")
+@WebServlet("/secure/upload")
 public class UploadServlet extends HttpServlet {
 
     private static final String UPLOAD_DIRECTORY = "C:/Users/ameda/Downloads/smartfeed/SmartFeed/images"; //Absolute path
@@ -41,11 +41,12 @@ public class UploadServlet extends HttpServlet {
         // Create a file upload factory and upload handler
         DiskFileItemFactory factory = new DiskFileItemFactory();
         factory.setSizeThreshold(MEMORY_THRESHOLD);
-        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
+        factory.setRepository(new File(System.getProperty("java.io.tmpdir")));;
 
         ServletFileUpload upload = new ServletFileUpload(factory);
         upload.setFileSizeMax(MAX_FILE_SIZE);
         upload.setSizeMax(MAX_REQUEST_SIZE);
+
 
         // Fix the path to save files within the images folder
         String uploadPath = UPLOAD_DIRECTORY; //specified in the absolutePath
@@ -71,7 +72,7 @@ public class UploadServlet extends HttpServlet {
                     // Send a success message
                     response.getWriter().println("Upload has been done successfully!");
                     response.getWriter().println("File path: " + filePath);
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("dashboard.jsp");
                 }
             }
         } catch (Exception ex) {

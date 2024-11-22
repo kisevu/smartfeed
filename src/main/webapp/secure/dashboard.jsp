@@ -234,7 +234,7 @@
 
       <a class="nav-item" href="#" data-bs-toggle="collapse" data-bs-target="#categoryDropdown" aria-expanded="false" aria-controls="categoryDropdown"><i class="bi bi-grid"></i> Categories</a>
       <div class="collapse" id="categoryDropdown">
-        <a class="nav-item" href="../../create-group"><i class="bi bi-person"></i>Add Category</a>
+        <a class="nav-item" href="/secure/"><i class="bi bi-person"></i>Add Category</a>
         <a class="nav-item ms-3" href="category.jsp?category=Technology"><i class="bi bi-tag"></i> Technology</a>
         <a class="nav-item ms-3" href="category.jsp?category=Sports"><i class="bi bi-tag"></i> Sports</a>
         <a class="nav-item ms-3" href="category.jsp?category=Family"><i class="bi bi-tag"></i> Family</a>
