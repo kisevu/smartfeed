@@ -140,62 +140,55 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <h2>Create a New Group</h2>
+
+        <div class="card-body" style="margin-bottom:-1rem">
+            <form action="create-group" method="post">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="form-group mb-3">
+                            <label for="group_name" class="form-label">Group Name</label>
+                            <input type="text" class="form-control" id="group_name" name="group_name" placeholder="Enter your group name" required/>
+                            <div class="invalid-feedback">
+                                Please enter your group name.
+                            </div>
+                        </div>
+                    </li>
 
 
-    <div class="row mt-4">
+                    <li class="list-group-item">
+                        <div class="form-group mb-3">
+                            <label for="isAdmin" class="form-label">IsAdmin</label>
+                            <input type="checkbox" id="isAdmin" name="isAdmin" value="1"  required/>
+                        </div>
+                    </li>
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Update Profile
-                </div>
-                <div class="card-body" style="margin-bottom:-1rem">
-                    <form action="update.jsp">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="form-group mb-3">
-                                    <label for="group_name" class="form-label">Group Name</label>
-                                    <input type="text" class="form-control" id="group_name" name="group_name" placeholder="Enter your group name" required/>
-                                    <div class="invalid-feedback">
-                                        Please enter your group name.
-                                    </div>
-                                </div>
-                            </li>
+                    <li class="list-group-item">
+                        <div class="form-group mb-3">
+                            <label for="group_type" class="form-label">Group Type</label>
+                            <input type="text"  class="form-control" id="group_type" name="group_type" required placeholder="Enter your group type here"/>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-group mb-3">
+                            <label for="group_description" class="form-label">Description</label>
+                            <textarea class="form-control" id="group_description" name="group_description" rows="3" placeholder="Tell us about this group"></textarea>
+                        </div>
+                    </li>
 
-                            <li class="list-group-item">
-                                <div class="form-group mb-3">
-                                    <label for="isAdmin" class="form-label">IsAdmin</label>
-                                    <input type="checkbox" id="isAdmin" name="isAdmin" ${settings.isAdmin ? 'checked' : ''}>
-                                </div>
-                            </li>
+                    <li class="list-group-item">
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-danger">Create Group</button>
+                        </div>
+                    </li>
+                </ul>
 
-                            <li class="list-group-item">
-                                <div class="form-group mb-3">
-                                    <label for="group_type" class="form-label">Group Type</label>
-                                    <input type="checkbox" id="group_type" name="group_type" ${settings.group_type ? 'checked' : ''}>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-group mb-3">
-                                    <label for="group_description" class="form-label">Description</label>
-                                    <textarea class="form-control" id="group_description" name="group_description" rows="3" placeholder="Tell us about this group"></textarea>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="mb-3 text-center">
-                                    <button type="submit" class="btn btn-danger">Create Group</button>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </form>
-                </div>
-            </div>
+            </form>
         </div>
 
     </div>
+
 </div>
 
 

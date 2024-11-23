@@ -154,7 +154,7 @@
           Update Profile
         </div>
         <div class="card-body" style="margin-bottom:-1rem">
-          <form action="update.jsp">
+          <form action="add-to-group" method="post">
             <ul class="list-group">
               <li class="list-group-item">
                 <div class="form-group mb-3">

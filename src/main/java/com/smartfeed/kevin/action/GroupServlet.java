@@ -6,74 +6,53 @@ package com.smartfeed.kevin.action;
 *
 */
 
+import com.smartfeed.kevin.db.DBConnection;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet("/create-group")
+@WebServlet("/secure/create-group")
 public class GroupServlet extends HttpServlet {
-
-    static {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");  // Register the JDBC driver
-        } catch (ClassNotFoundException e) {
-            System.out.println("An error has occurred:"+e.getMessage());
-        }
-    }
 
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest req,
-                          HttpServletResponse res)
-            throws ServletException,
-            IOException{
-        String group_name = req.getParameter("group_name");
-        String group_description = req.getParameter("group_description");
-        String group_type = req.getParameter("group_type");
-        boolean isAdmin = Boolean.parseBoolean(req.getParameter("isAdmin"));
-
-        Connection con = null;
-        try{
-            String sql = "insert into group (group_name, group_description,group_type,isAdmin) VALUES (?, ?, ?, ?)";
-            con = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/smartfeed",
-                            "root",
-                            "rootUser@123");
-            PreparedStatement preparedStatement = con.prepareStatement(sql);
-
-            preparedStatement.setString(1, group_name);
-            preparedStatement.setString(2, group_description);
-            preparedStatement.setString(3, group_type);
-            preparedStatement.setString(4, String.valueOf(isAdmin));
-            int rowsAffected = preparedStatement.executeUpdate();
-            PrintWriter printWriter = res.getWriter();
-            if (rowsAffected > 0) {
-                printWriter.println("Group added successfully.");
-                req.setAttribute("status","success");
-                res.sendRedirect("index");
-
-            } else {
-                printWriter.println("Group population failed..");
-                req.setAttribute("status","failed");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+            IOException {
+        // Retrieve form parameters
+        String group_name = request.getParameter("group_name");
+        String group_description = request.getParameter("group_description");
+        String group_type = request.getParameter("group_type");
+        boolean isAdmin = request.getParameter("isAdmin") != null && request.getParameter("isAdmin").equals("1");
+        System.out.println("Executing near");
+        // Database connection and SQL to insert data
+        try (Connection conn = DBConnection.getConnection()) {
+            String sql = "INSERT INTO groups_tbl (group_name, group_description, group_type, isAdmin) VALUES (?, ?, ?, ?)";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, group_name);
+                stmt.setString(2, group_description);
+                stmt.setString(3, group_type);
+                stmt.setBoolean(4, isAdmin);
+                System.out.println("Executed already");
+                // Execute the update query
+                int rowsInserted = stmt.executeUpdate();
+                if (rowsInserted > 0) {
+                    response.sendRedirect("groups.jsp"); // Redirect to a page after successful insertion
+                } else {
+                    response.getWriter().println("Error creating group.");
+                }
+            } catch (SQLException e) {
+                response.getWriter().println("Error: " + e.getMessage());
             }
-        }catch (Exception ex){
-            System.out.println(ex.getMessage());
-            PrintWriter printWriter = res.getWriter();
-            printWriter.println("An error occurred: " + ex.getMessage());
-        } finally {
-            try{
-                con.close();
-            }catch (SQLException ex){
-                System.out.println("An error has occurred: "+ex.getMessage());
-            }
+        } catch (SQLException e) {
+            response.getWriter().println("Error: " + e.getMessage());
         }
     }
 

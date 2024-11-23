@@ -51,14 +51,14 @@ public class RegisterServlet extends HttpServlet {
                 int rowsAffected = stmt.executeUpdate();
                 if (rowsAffected > 0) {
                     //redirect to login page after successful registration
-                    res.sendRedirect("/secure/index.jsp");
+                    res.sendRedirect("index.jsp");
                 } else {
-                    res.sendRedirect("register.jsp?error=1");
+                    res.sendRedirect("/errors/errors.jsp");
                 }
             }
         } catch (SQLException ex) {
             System.out.println("An error occurred: " + ex.getMessage());
-            res.sendRedirect("register.jsp?error=2");
+            res.sendRedirect("/errors/errors.jsp");
         }
     }
 

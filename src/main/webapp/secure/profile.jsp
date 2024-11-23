@@ -246,7 +246,7 @@
                 <h5>Cover Photo</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form action="upload" method="post" novalidate enctype="multipart/form-data">
+                        <form action="/secure/upload" method="post" novalidate enctype="multipart/form-data">
                             <div class="form-group mb-3">
                                 <label for="profilePic" class="form-label">Upload profile Picture</label>
                                 <input type="file" class="form-control" id="profilePic" name="profilePic"  required/>

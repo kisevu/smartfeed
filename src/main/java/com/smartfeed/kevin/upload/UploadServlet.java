@@ -23,7 +23,7 @@ import java.util.List;
 @WebServlet("/secure/upload")
 public class UploadServlet extends HttpServlet {
 
-    private static final String UPLOAD_DIRECTORY = "C:/Users/ameda/Downloads/smartfeed/SmartFeed/images"; //Absolute path
+    private static final String UPLOAD_DIRECTORY = "C:/Users/ameda/Downloads/smartfeed/SmartFeed/src/main/webapp/secure/images"; //Absolute path
     private static final int MEMORY_THRESHOLD = 1024 * 1024 * 3;  // 3 MB
     private static final int MAX_FILE_SIZE = 1024 * 1024 * 50;  // 50 MB
     private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 100;  // 100 MB
