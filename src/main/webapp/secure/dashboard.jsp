@@ -298,54 +298,228 @@
   </div>
 
   <h2 class="text-center mb-7 mt-7">Smart Feed Automation and Personalization</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Card 1 -->
+    <div class="card h-100" data-card-id="1">
+      <img src="https://images.unsplash.com/photo-1597075095308-0b47fc649175?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8fDA%3D"
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
 
-  <div class="row">
-      <!-- Loop through all posts and create a card for each -->
-      <c:forEach var="post" items="${posts}">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100" data-card-id="${post.postId}">
-            <!-- Display the image (media) -->
-            <c:if test="${not empty post.media}">
-              <img src="${post.media}" class="card-img-top" alt="Card image">
-            </c:if>
-
-            <!-- Card Body -->
-            <div class="card-body">
-              <h5 class="card-title">${post.postText}</h5>
-              <p class="card-text">${post.postText}</p>
-            </div>
-
-            <!-- Card Footer (Like, Dislike, Comment buttons) -->
-            <div class="card-footer text-center">
-              <!-- Like Button -->
-              <a href="#" class="btn btn-outline-success me-2">
-                <i class="fas fa-thumbs-up"></i> Like
-              </a>
-              <!-- Dislike Button -->
-              <a href="#" class="btn btn-outline-danger me-2">
-                <i class="fas fa-thumbs-down"></i> Dislike
-              </a>
-              <!-- Comment Button -->
-              <a href="#" class="btn btn-outline-primary">
-                <i class="fas fa-comment"></i> Comment
-              </a>
-            </div>
-
-            <!-- Comment Section (Hidden Initially) -->
-            <div class="card-body comment-section" style="display:none;">
-              <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
-              <div class="d-flex justify-content-between mt-2">
-                <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
-                <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
-              </div>
-            </div>
-          </div>
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
         </div>
-      </c:forEach>
+      </div>
+    </div>
+
+
+
+
+    <!-- Card 2 -->
+    <div class="card h-100" data-card-id="2">
+      <img src="https://plus.unsplash.com/premium_photo-1684979564941-dbf8664a68fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww"
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
+
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for other cards, changing only data-card-id attribute -->
+
+
+    <!-- Card 3 -->
+    <div class="card h-100" data-card-id="3">
+      <img src="https://images.unsplash.com/photo-1603145733146-ae562a55031e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww"
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
+
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for other cards, changing only data-card-id attribute -->
+
+
+    <div class="card h-100" data-card-id="4">
+      <img src="https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=bo9P4L3HQM2cipWrh8W7_HwPYNnUdHKqucWnduQLge0="
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
+
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for other cards, changing only data-card-id attribute -->
+
+
+    <div class="card h-100" data-card-id="5">
+      <img src="https://media.istockphoto.com/id/1557118048/photo/a-concept-that-expresses-the-hyper-connected-society-of-modern-society-by-connecting-people.webp?a=1&b=1&s=612x612&w=0&k=20&c=KKDeYnYsmUZfziILp3eIpMhMPG8_CwfkAo7MI5buI84="
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
+
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for other cards, changing only data-card-id attribute -->
+
+
+
+
+    <div class="card h-100" data-card-id="6">
+      <img src="https://media.istockphoto.com/id/1609592194/photo/african-american-teenage-woman-using-a-smartphone-laptop-with-icon-communication-network.webp?a=1&b=1&s=612x612&w=0&k=20&c=F76oV6t8pmDH9AWFQlkm24ou_qI5BY7G-qduu8O-ADQ="
+           class="card-img-top"
+           alt="Card image 1">
+      <div class="card-body">
+        <h5 class="card-title">Exciting New Feature</h5>
+        <p class="card-text">Discover the latest features we have added to enhance your experience with SmartFeed.</p>
+      </div>
+      <div class="card-footer text-center">
+        <!-- Like Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-up"></i> Like
+        </a>
+        <!-- Dislike Button -->
+        <a href="#" class="btn btn-custom me-3">
+          <i class="fas fa-thumbs-down"></i> Dislike
+        </a>
+        <!-- Comment Button -->
+        <a href="#" class="btn btn-custom comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </a>
+      </div>
+
+      <!-- Comment Section (Hidden Initially) -->
+      <div class="card-body comment-section" style="display:none;">
+        <textarea class="form-control" rows="4" placeholder="Type your comment here..."></textarea>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-primary submit-comment-btn">Submit Comment</button>
+          <button class="btn btn-secondary cancel-comment-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer has been imported over here -->
   </div>
 </div>
-
 
 <!-- Toggle behavior for the comments button -->
 
